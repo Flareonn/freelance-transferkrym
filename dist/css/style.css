@@ -526,6 +526,18 @@ h6 {
   padding-bottom: 15px;
 }
 
+.features-block-header__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.features-block__description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 @media (min-width: 1537px) {
   .main > .container {
     padding: 0px 192px;
