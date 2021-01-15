@@ -10,13 +10,24 @@
       transition: .25s color ease
   &>.container
     display: grid
-    grid-template-columns: 200px 1fr .30fr
+    grid-template-columns: .5fr 1fr .5fr
     align-items: center
     grid-column-gap: 75px
+    @media (max-width: $md1+px)
+      grid-template-columns: 200px 1fr 1fr
+    @media ( max-width: $md2+px )
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      grid-column-gap: 20px
   &-logo
     font-weight: bold
     font-size: 16px
     line-height: 20px
+  &-nav
+    justify-items: center
+    @media ( max-width: $md2+px )
+      grid-row: 2
+      grid-column: span 2
   &-list
     display: grid
     grid-template-columns: repeat(4, auto)
@@ -30,6 +41,7 @@
     display: grid
     grid-template-columns: 1fr 25px
     grid-column-gap: 30px
+    justify-items: flex-end
     &__block
       display: grid
       grid-template-rows: repeat(2, 1fr)
@@ -42,6 +54,11 @@
           display: flex
           align-items: center
           justify-content: center
+          svg path
+            transition: .25s fill ease
+          &:hover svg path
+            fill: $c-active
+            transition: .25s fill ease
           &>span
             padding-left: 15px
         &>span
@@ -49,9 +66,3 @@
           font-size: 12px
           line-height: 15px
           text-align: center
-    &__link
-      svg path
-        transition: .25s fill ease
-      &:hover svg path
-        fill: $c-active
-        transition: .25s fill ease
