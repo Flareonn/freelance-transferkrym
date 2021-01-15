@@ -15,5 +15,5 @@
 7. git add .
 8. git commit -m "your text"
 9. git branch -M main
-10. git remote add origin https://github.com/Flareonn/NAME_OF_REPO.git
+10. git remote add origin https://github.com/Flareonn/transferKrym.git
 11. git push -u origin main

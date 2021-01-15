@@ -1,0 +1,57 @@
+.header
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.48) 59.9%, rgba(0, 0, 0, 0) 100%)
+  padding: 40px 0px 110px 0px
+  a, *
+    color: #ffffff
+  a, a span
+    transition: .25s color ease
+    &:hover, &:hover span
+      color: $c-active
+      transition: .25s color ease
+  &>.container
+    display: grid
+    grid-template-columns: 200px 1fr .30fr
+    align-items: center
+    grid-column-gap: 75px
+  &-logo
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+  &-list
+    display: grid
+    grid-template-columns: repeat(4, auto)
+    grid-column-gap: 21px
+    justify-items: center
+    &__link
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+  &-actions
+    display: grid
+    grid-template-columns: 1fr 25px
+    grid-column-gap: 30px
+    &__block
+      display: grid
+      grid-template-rows: repeat(2, 1fr)
+      grid-row-gap: 9px
+      &:first-child
+        &>a
+          font-weight: 600
+          font-size: 16px
+          line-height: 20px
+          display: flex
+          align-items: center
+          justify-content: center
+          &>span
+            padding-left: 15px
+        &>span
+          font-weight: 500
+          font-size: 12px
+          line-height: 15px
+          text-align: center
+    &__link
+      svg path
+        transition: .25s fill ease
+      &:hover svg path
+        fill: $c-active
+        transition: .25s fill ease

@@ -1,0 +1,119 @@
+.main
+  width: 100%
+  height: 100vh
+  background-image: url('../img/main/bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  z-index: 2
+  &>.container
+    padding: 0px 192px
+  &__title
+    text-align: center
+    font-weight: bold
+    font-size: 80px
+    line-height: 98px
+    padding-bottom: 50px
+  &__title, &-hero__description
+    color: $c-normal
+  &-hero
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-row-gap: 48px
+    grid-column-gap: 20px
+    justify-items: center
+    align-items: center
+    &__features
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      >span
+        flex-basis: 75%
+        padding-left: 31px
+        font-weight: bold
+        font-size: 20px
+        line-height: 24px
+    &__form
+      grid-column: span 2
+      width: 100%
+      background: #FFFFFF
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6)
+      border-radius: 10px
+      padding: 38px 65px 67px
+  &::after
+    content: ''
+    display: block
+    width: 100%
+    height: 309px
+    position: absolute
+    bottom: 0
+    z-index: -1
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.123) 50%, rgba(255, 255, 255, 0.3936) 100%)
+  &-form
+    &__title
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      span:not(.c-active)
+        padding-left: 24px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        color: #9f9f9f
+    &__input
+      padding: 0px 32px
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      color: #9f9f9f
+      box-sizing: border-box
+      border-radius: 5px
+      &::placeholder
+        color: #9f9f9f
+      &:not([type="submit"])
+        border: 2px solid #C5C5C5
+        &:focus
+          color: #2C2C2C
+          border-color: $c-sec!important
+    &__submit
+      background: #2747F0
+      box-shadow: 0px 0px 10px rgba(39, 68, 222, 0.3)
+      border-radius: 30px
+      font-weight: bold
+      font-size: 14px
+      line-height: 17px
+      padding: 0px 70px
+      grid-column: span 2
+      width: fit-content
+      color: #FFFFFF
+    &__textarea
+      resize: none
+      padding-top: 12px
+    &__select
+      appearance: none
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L9.99999 10L20 0H0Z' fill='%239f9f9f'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: bottom 19px right 30px
+      &:focus
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L9.99999 10L20 0H0Z' fill='%232747F0'/%3E%3C/svg%3E")
+    &-wrapper
+      padding-top: 31px
+      display: grid
+      grid-template: repeat(4, minmax(50px, 1fr)) / repeat(2, 1fr) repeat(2, minmax(160px, 1fr))
+      grid-gap: 20px 30px
+      grid-template-areas: "name name date time" "tel tel from to" "comment comment class class" "comment comment submit ."
+      &>*
+        &[placeholder="Имя"]
+          grid-area: name
+        &[placeholder="Телефон"]
+          grid-area: tel
+        &[placeholder="Комментарий"]
+          grid-area: comment
+        &[type="time"], &[type="date"]
+          &::-webkit-calendar-picker-indicator
+            filter: invert(.5)
+          &:focus::-webkit-calendar-picker-indicator
+            filter: invert(0)
+      >select
+        grid-area: class
