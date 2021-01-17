@@ -6,15 +6,24 @@
     align-items: center
     flex-wrap: wrap
     padding-bottom: 76px
+    @media (max-width: $md2+px)
+      flex-direction: column
+      align-items: flex-start
+      padding-bottom: 50px
   &__title
     @extend .title
     margin-right: 60px
     padding-bottom: 0
+    @media (max-width: $md2+px)
+      margin-right: 0
+      padding-bottom: 16px
   &__subtitle
     font-weight: 600
     font-size: 16px
     line-height: 20px
     color: #9F9F9F
+    @media (max-width: $md2+px)
+      padding-left: 54px
   &-slider
     width: 100%
     height: auto

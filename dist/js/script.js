@@ -19,11 +19,15 @@ testWebP(function (support) {
 jQuery(function($) {
   let feedbackSwiper = new Swiper('.feedback-slider', {
     loop: true,
-    slidesPerView: 2,
     spaceBetween: 30,
+    breakpoints: {
+      993: {
+        slidesPerView: 2,
+      }
+    },
     pagination: {
       el: '.swiper-pagination',
-    },
+    }
   })
   document.querySelectorAll('details').forEach((el) => {
     new Accordion(el, '.faq-question', '.faq-content');

@@ -1,5 +1,8 @@
 .hero
   padding-bottom: 92px
+  @media ( max-width: $md3+px )
+    &>.container
+      padding: 0
   &-wrapper
     display: grid
     grid-template-columns: 1fr 314px
@@ -8,6 +11,11 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05)
     border-radius: 10px
     position: relative
+    @media (max-width: $md2+px)
+      grid-template-columns: auto
+      grid-template-rows: 1fr 298px
+    @media ( max-width: $md3+px )
+      grid-template-rows: 1fr 169px
     &::after
       position: absolute
       top: -40px
@@ -42,3 +50,14 @@
       justify-content: flex-end
       position: absolute
       right: 0
+      bottom: 0
+      @media (max-width: $md2+px)
+        left: 50%
+        transform: translateX(-50%)
+        >picture
+          display: flex
+          justify-content: center
+          >img
+            max-width: 80%
+            @media ( max-width: $md3+px )
+              max-width: 65%

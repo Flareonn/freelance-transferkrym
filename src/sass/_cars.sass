@@ -8,7 +8,9 @@
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-column-gap: 30px
-    justify-content: center
+    align-items: flex-end
+    @media (max-width: $md2+px)
+      grid-template-columns: repeat(2, 1fr)
   &-block
     &:hover .cars-block-image::before
       position: absolute
@@ -46,13 +48,17 @@
       text-align: center
       &__button
         @extend .button
-        width: 256px
+        max-width: 256px
+        width: 100%
   &-capacity
     display: flex
-    justify-content: space-between
+    justify-content: center
     flex-basis: fill
+    flex-wrap: wrap
     &__inner
       display: flex
+      &:first-child
+        margin-right: 15px
     &__description
       padding-left: 5px
       font-weight: 600

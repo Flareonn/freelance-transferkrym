@@ -25,11 +25,13 @@
   &>.container
     padding-top: 50px
     padding-bottom: 45px
-    // display: flex
-    // justify-content: space-between
     display: grid
     grid-template-columns: repeat(4,1fr)
     grid-column-gap: 80px
+    @media ( max-width: $md2+px )
+      grid-column-gap: 40px
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(2, 1fr)
   &-column
     &__copy
       font-weight: 500
@@ -73,6 +75,8 @@
     font-weight: 500
     font-size: 14px
     line-height: 17px
+    @media ( max-width: $md2+px )
+      grid-column: span 2
     &__location
       color: #D1D1D1
       &:first-child

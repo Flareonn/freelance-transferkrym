@@ -1,6 +1,8 @@
 .header
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.48) 59.9%, rgba(0, 0, 0, 0) 100%)
   padding: 40px 0px 110px 0px
+  @media ( max-width: $md3+px )
+    padding-bottom: 60px
   a, *
     color: #ffffff
   a, a span
@@ -14,7 +16,7 @@
     align-items: center
     // grid-column-gap: 75px
     @media (max-width: $md1+px)
-      grid-template-columns: 200px 1fr 1fr
+      grid-template-columns: .4fr 1fr .5fr
     @media ( max-width: $md2+px )
       grid-template-columns: repeat(2, 1fr)
       grid-template-rows: repeat(2, 1fr)
