@@ -4,3 +4,54 @@ $maxWidth: 1920
   $addSize: $pcSize - $mobSize
   $maxWidth: $maxWidth - 320
   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+@mixin adaptive-line($pcSize, $mobSize) // Адаптивный шрифт
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+.title
+  padding-left: 54px
+  font-weight: bold
+  padding-bottom: 40px
+  +adaptive-font(40, 20)
+  +adaptive-font(49, 24)
+
+.input
+  padding: 16.5px 32px
+  font-weight: 600
+  font-size: 14px
+  line-height: 17px
+  color: #9f9f9f
+  box-sizing: border-box
+  border-radius: 5px
+  max-height: 50px
+  &::placeholder
+    color: #9f9f9f
+  &:not([type="submit"])
+    border: 2px solid #C5C5C5
+    &:focus
+      color: #2C2C2C
+      border-color: $c-sec!important
+    &:hover
+      border-color: rgba($c-sec, .5)
+  &[type="time"], &[type="date"]
+    &::-webkit-calendar-picker-indicator
+      filter: invert(.5)
+    &:focus::-webkit-calendar-picker-indicator
+      filter: invert(0)
+
+.button
+  background: #2747F0
+  box-shadow: 0px 0px 10px rgba(39, 68, 222, 0.3)
+  border-radius: 30px
+  font-weight: bold
+  font-size: 14px
+  line-height: 17px
+  padding: 16.5px
+  text-align: center
+  color: #FFFFFF
+  cursor: pointer
+  transition: .25s background-color ease
+  user-select: none
+  &:hover
+    background-color: $c-active

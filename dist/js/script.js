@@ -1,3 +1,5 @@
+import Accordion from './accordion.js'
+
 function testWebP(callback) {
   var webP = new Image();
   webP.onload = webP.onerror = function () {
@@ -13,3 +15,17 @@ testWebP(function (support) {
     document.querySelector("body").classList.add("no-webp");
   }
 });
+
+jQuery(function($) {
+  let feedbackSwiper = new Swiper('.feedback-slider', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  })
+  document.querySelectorAll('details').forEach((el) => {
+    new Accordion(el, '.faq-question', '.faq-content');
+  });
+})

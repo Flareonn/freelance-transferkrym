@@ -12,7 +12,7 @@ let path = {
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/sass/style.sass",
-    js: source_folder + "/js/script.js",
+    js: source_folder + "/js/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,giv,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
   },

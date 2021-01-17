@@ -1,0 +1,79 @@
+.footer
+  background-image: url('../img/main/bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center 60%
+  position: relative
+  z-index: 1
+  &__title
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 13px
+  *
+    color: #fff
+  &::before
+    z-index: -1
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    width: 100%
+    height: 100%
+    content: ''
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.76) 59.9%, rgba(0, 0, 0, 0.5) 100%)
+  &>.container
+    padding-top: 50px
+    padding-bottom: 45px
+    // display: flex
+    // justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    grid-column-gap: 80px
+  &-column
+    &__copy
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #D1D1D1
+  &-list
+    &__item
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+      margin-bottom: 25px
+  &-actions
+    display: grid
+    grid-template-rows: .2fr
+    grid-row-gap: 20px
+    justify-items: end
+    &__link
+      display: flex
+      align-items: center
+      & > span
+        margin-left: 15px
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+    &__block
+      &:first-child
+        .footer-actions__link
+          margin-bottom: 8px
+      &:last-child
+        display: flex
+        align-items: flex-start
+        .footer-actions__link:not(:last-child)
+          margin-right: 13px
+      & > span
+        font-weight: 500
+        font-size: 12px
+        line-height: 15px
+  &-geo
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    &__location
+      color: #D1D1D1
+      &:first-child
+        margin-bottom: 20px

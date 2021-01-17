@@ -1,0 +1,31 @@
+.benefits
+  &>.container
+    padding-bottom: 80px
+  &__title
+    @extend .title
+    padding-bottom: 50px
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    justify-items: center
+  &-block
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-header
+      margin-bottom: 15px
+      display: flex
+      align-items: flex-end
+      height: 60px
+      &__number
+        padding-left: 15px
+        font-weight: bold
+        font-size: 30px
+        line-height: 37px
+    &__description
+      width: 70%
+      text-align: center
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      color: #2C2C2C

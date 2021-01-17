@@ -1,0 +1,44 @@
+.hero
+  padding-bottom: 92px
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 314px
+    grid-template-rows: 450px
+    background: $c-active
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05)
+    border-radius: 10px
+    position: relative
+    &::after
+      position: absolute
+      top: -40px
+      left: 64px
+      display: block
+      content: '“'
+      font-weight: bold
+      font-size: 120px
+      line-height: 146px
+      color: #2C2C2C
+    &-text
+      background: #FFFFFF
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
+      border-radius: 10px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 76px 64px 57px
+      &__title
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 33px
+      &__description
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #9F9F9F
+        margin-bottom: 8px
+    &-image
+      display: flex
+      justify-content: flex-end
+      position: absolute
+      right: 0

@@ -11,9 +11,6 @@
     overflow: hidden
   &>.container
     padding-bottom: 113px
-    @media ( min-width: 1537px )
-      padding: 0px 192px
-      padding-bottom: 113px
   &__title
     text-align: center
     font-weight: bold
@@ -75,34 +72,16 @@
         line-height: 17px
         color: #9f9f9f
     &__input
+      @extend .input
       padding: 0px 32px
-      font-weight: 600
-      font-size: 14px
-      line-height: 17px
-      color: #9f9f9f
-      box-sizing: border-box
-      border-radius: 5px
-      &::placeholder
-        color: #9f9f9f
-      &:not([type="submit"])
-        border: 2px solid #C5C5C5
-        &:focus
-          color: #2C2C2C
-          border-color: $c-sec!important
     &__submit
-      background: #2747F0
-      box-shadow: 0px 0px 10px rgba(39, 68, 222, 0.3)
-      border-radius: 30px
-      font-weight: bold
-      font-size: 14px
-      line-height: 17px
-      padding: 0px 70px
-      color: #FFFFFF
+      @extend .button
       grid-area: submit
-      width: fit-content
+      width: 256px
     &__textarea
       resize: none
       padding-top: 16px
+      max-height: none
     &__select
       appearance: none
       background-image: url("data:image/svg+xml,%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L9.99999 10L20 0H0Z' fill='%239f9f9f'/%3E%3C/svg%3E")
@@ -139,10 +118,5 @@
         &[placeholder="Куда"]
           grid-area: to
           width: calc(fit-content - 30px)
-        &[type="time"], &[type="date"]
-          &::-webkit-calendar-picker-indicator
-            filter: invert(.5)
-          &:focus::-webkit-calendar-picker-indicator
-            filter: invert(0)
       >select
         grid-area: class

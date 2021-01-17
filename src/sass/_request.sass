@@ -1,0 +1,29 @@
+.request
+  padding-top: 68px
+  padding-bottom: 90px
+  &>.container
+    background: #FFFFFF
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05)
+    border-radius: 10px
+    padding: 41px 32.5px
+  &__title
+    @extend .title
+    font-size: 16px
+    line-height: 20px
+    padding-left: 0
+    padding-bottom: 13px
+  &-form
+    display: grid
+    grid-template-columns: 1fr repeat(2, minmax(0px, 192px)) minmax(0px, 256px)
+    grid-column-gap: 30px
+    align-items: flex-end
+    &__title
+      font-weight: 600
+      font-size: 16px
+      line-height: 20px
+      color: #9F9F9F
+    &__input
+      @extend .input
+      border-radius: 10px
+    &__submit
+      @extend .button

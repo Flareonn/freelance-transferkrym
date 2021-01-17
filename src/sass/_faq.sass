@@ -1,0 +1,40 @@
+.faq
+  &__title
+    @extend .title
+  &-wrapper
+    padding: 50px 0px
+    &__item
+      line-height: 1.25
+      margin-bottom: 20px
+      &[open]
+        .faq-question
+          background-color: $c-active
+          &::before
+            content: '-'
+  &-question
+    cursor: pointer
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: #2C2C2C
+    padding: 15px 63px
+    border-radius: 5px
+    display: flex
+    align-items: center
+    background-color: #E5E5E5
+    &::-webkit-details-marker
+      display: none
+    &::before
+      content: '+'
+      font-weight: 500
+      font-size: 30px
+      line-height: 37px
+      padding-right: 15px
+      color: #2C2C2C
+  &-content
+    padding-top: 20px
+    padding-left: 63px
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: #9F9F9F
